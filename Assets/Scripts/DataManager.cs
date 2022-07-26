@@ -7,7 +7,9 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
 
-    private string playerName;
+    private string playerName = string.Empty;
+
+    // ENCAPSULATION
     public string PlayerName 
     { 
         get { return playerName; }
@@ -24,6 +26,7 @@ public class DataManager : MonoBehaviour
         }
     }
 
+    // ABSTRACTION
     public bool NameIsValid
     {
         get { return !string.IsNullOrEmpty(playerName.Trim()); }

@@ -17,10 +17,15 @@ public class TitleScreenManager : MonoBehaviour
         nameInputField.ActivateInputField();
     }
 
+    public void UpdateName()
+    {
+        DataManager.Instance.PlayerName = nameInputField.text;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        startButton.interactable = !string.IsNullOrEmpty(nameInputField.text.Trim());
+        startButton.interactable = DataManager.Instance.NameIsValid;
     }
 
     public void StartButtonClick()

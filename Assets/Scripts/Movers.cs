@@ -9,8 +9,10 @@ public class Movers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // POLYMORPHISM
         foreach(BaseShape mover in movers)
         {
+            // ABSTRACTION
             mover.ColorIt();
         }
     }
@@ -18,8 +20,10 @@ public class Movers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // POLYMORPHISM
         foreach (BaseShape mover in movers)
         {
+            // ABSTRACTION
             mover.MoveIt();
         }
     }
